@@ -1,0 +1,91 @@
+/* Base reset and typography */
+* {
+  box-sizing: border-box;
+}
+
+:root {
+  --bg: #0f172a;        /* slate-900 */
+  --card: #111827;      /* gray-900 */
+  --text: #e5e7eb;      /* gray-200 */
+  --accent: #22c55e;    /* green-500 */
+  --accent-dark: #16a34a;
+}
+
+html, body {
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  background: linear-gradient(180deg, var(--bg), #111827 60%);
+  color: var(--text);
+  font-family: system-ui, -apple-system, Segoe UI, Roboto, "Helvetica Neue", Arial, "Noto Sans", "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", sans-serif;
+  line-height: 1.6;
+  display: grid;
+  grid-template-rows: auto 1fr auto;
+}
+
+/* Header */
+.site-header {
+  padding: 1.5rem;
+  text-align: center;
+  backdrop-filter: saturate(120%) blur(4px);
+}
+
+.site-header h1 {
+  margin: 0;
+  font-size: 2rem;
+  letter-spacing: 0.02em;
+}
+
+/* Main content card */
+.content {
+  margin: 2rem auto;
+  padding: 2rem;
+  width: min(800px, 92%);
+  background: radial-gradient(1200px 600px at 10% 10%, rgba(34, 197, 94, 0.08), transparent 50%),
+              radial-gradient(900px 500px at 90% 20%, rgba(59, 130, 246, 0.08), transparent 50%),
+              var(--card);
+  border: 1px solid rgba(229, 231, 235, 0.08);
+  border-radius: 16px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.35);
+}
+
+.content p {
+  margin: 0 0 1.25rem 0;
+  font-size: 1.05rem;
+  color: #cbd5e1; /* slate-300 */
+}
+
+/* Button */
+#actionBtn {
+  appearance: none;
+  border: none;
+  padding: 0.75rem 1.1rem;
+  border-radius: 12px;
+  background: linear-gradient(180deg, var(--accent), var(--accent-dark));
+  color: #062814;
+  font-weight: 700;
+  letter-spacing: 0.02em;
+  cursor: pointer;
+  transition: transform 120ms ease, box-shadow 120ms ease, filter 160ms ease;
+  box-shadow: 0 8px 20px rgba(34, 197, 94, 0.25);
+}
+
+#actionBtn:hover {
+  transform: translateY(-1px);
+  filter: brightness(1.03);
+}
+
+#actionBtn:active {
+  transform: translateY(0);
+  box-shadow: 0 6px 14px rgba(34, 197, 94, 0.25);
+}
+
+/* Footer */
+.site-footer {
+  padding: 1rem 1.5rem;
+  text-align: center;
+  color: #94a3b8; /* slate-400 */
+  border-top: 1px solid rgba(148, 163, 184, 0.15);
+}
