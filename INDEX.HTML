@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Simple Separate Files Demo</title>
+
+  <!-- Link external CSS -->
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="site-header">
+    <h1>Welcome to My Web Page</h1>
+  </header>
+
+  <main class="content">
+    <p>
+      This page uses separate files for HTML, CSS, and JavaScript.
+      Click the button to see an interaction.
+    </p>
+
+    <button id="actionBtn" aria-label="Show alert">Click me</button>
+  </main>
+
+  <footer class="site-footer">
+    <small>&copy; 2025 My Site</small>
+  </footer>
+
+  <!-- Load external JS at the end for performance -->
+  <script src="script.js"></script>
+</body>
+</html>
